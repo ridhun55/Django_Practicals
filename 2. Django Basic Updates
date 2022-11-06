@@ -1,1 +1,39 @@
+# Django Basic updates
+1. settings.py basic updates <br>
 
+import os
+```python
+import os
+```
+Register HpmeApp
+```python
+INSTALLED_APPS = [
+    ...
+    'HomeApp',
+    ...
+]
+```
+Add Templates Folder Path
+```python
+TEMPLATES = [
+    {
+        ....
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        ...
+    },
+]
+```
+Add Static Folder Path & URL 
+```python
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+```
+Add Media Folder Path & URL 
+```python
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+```
